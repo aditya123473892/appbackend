@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const TransporterController = require("../controller/transportercontroller");
+const TransporterController = require("../controller/transporterdetailscontroller");
 const auth = require("../middlewares/auth");
 
 // Create single transporter details
