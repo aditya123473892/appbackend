@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const transporterController = require("../controller/transportercontroller");
+const transporterController = require("../controller/transporterController");
 
 router.get("/", transporterController.getAllTransporters);
 

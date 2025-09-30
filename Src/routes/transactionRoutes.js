@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const TransactionController = require("../controller/transactioncontroller");
+const TransactionController = require("../controller/transactionController");
 const auth = require("../middlewares/auth");
 
 // Create a new transaction
