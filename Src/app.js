@@ -40,7 +40,7 @@ const serviceroutes = require("./routes/serviceroutes");
 const vendorRoutes = require("./routes/vendorRoutes");
 const driverRoutes = require("./routes/driverRoutes");
 const equipmentRoutes = require("./routes/equipmentRoutes");
-const vehiicleRoutes = require("./routes/vehicleRoutes");
+const vehicleRoutes = require("./routes/vehicleRoutes");
 const asnRoutes = require("./routes/asnRoutes");
 
 // New OEM Pickup Routes
