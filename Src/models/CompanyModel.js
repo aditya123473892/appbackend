@@ -1,15 +1,16 @@
+
 const { pool, sql } = require("../config/dbconfig");
 
-class Location {
+class Company {
     static async getAll() {
         try {
-            const result = await pool.request().query("SELECT * FROM dbo.locations");
+            const result = await pool.request().query("SELECT * FROM dbo.companies");
             return result.recordset;
         } catch (err) {
-            console.error("Error in Location.getAll: ", err);
+            console.error("Error in Company.getAll: ", err);
             throw err;
         }
     }
 }
 
-module.exports = Location;
+module.exports = Company;

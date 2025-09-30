@@ -1,15 +1,10 @@
-const locationModel = require("../models/LocationModel");
+const Location = require("../models/LocationModel");
 
-// Controller to handle GET request
-const getLocations = async (req, res) => {
-  try {
-    const locations = await locationModel.getAllLocations();
-    res.status(200).json(locations);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
-
-module.exports = {
-  getLocations,
+exports.getAllLocations = async (req, res) => {
+    try {
+        const locations = await Location.getAll();
+        res.json(locations);
+    } catch (err) {
+        res.status(500).json({ message: "Error fetching locations", error: err });
+    }
 };

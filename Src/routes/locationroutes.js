@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const locationController = require("../controller/locationcontroller");
+const locationController = require("../controller/locationController");
 
-// GET /api/locations
-router.get("/", locationController.getLocations);
+router.get("/", locationController.getAllLocations);
 
 module.exports = router;

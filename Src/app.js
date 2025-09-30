@@ -32,32 +32,41 @@ connectDB();
 const authRoutes = require("./routes/authRoutes");
 const UserRoutes = require("./routes/UserRoutes");
 const transportRequestRoutes = require("./routes/transportRequestRoutes");
-const transporterRoutes = require("./routes/transporterdetailsroutes");
 const CustomerMasterRoutes = require("./routes/customermasterroutes");
 const transactionRoutes = require("./routes/transactionRoutes");
 const transportlistroutes = require("./routes/transporterlistroutes");
 const serviceroutes = require("./routes/serviceroutes");
-const vendorRoutes = require("./routes/vendorRoutes"); // Add this line
+const vendorRoutes = require("./routes/vendorRoutes");
 const driverRoutes = require("./routes/driverRoutes");
-const locationRoutes = require("./routes/locationroutes"); // Import location routes
-const equipmentRoutes = require("./routes/equipmentRoutes"); // Import equipment routes
-const vehiicleRoutes = require("./routes/vehicleRoutes"); // Import vehicle routes
-const asnRoutes = require("./routes/asnRoutes"); // Import ASN routes
-// Mount routes with more specific routes first
+const equipmentRoutes = require("./routes/equipmentRoutes");
+const vehiicleRoutes = require("./routes/vehicleRoutes");
+const asnRoutes = require("./routes/asnRoutes");
+
+// New OEM Pickup Routes
+const companyRoutes = require("./routes/companyRoutes");
+const locationRoutes = require("./routes/locationroutes");
+const transporterRoutes = require("./routes/transporterRoutes");
+const oemPickupRoutes = require("./routes/oemPickupRoutes");
+
+// Mount routes
 app.use("/api/auth", authRoutes);
 app.use("/api/users", UserRoutes);
 app.use("/api/transport-requests", transportRequestRoutes);
-app.use("/api", transporterRoutes);
 app.use("/api/customers", CustomerMasterRoutes);
 app.use("/api/transactions", transactionRoutes);
 app.use("/api/transporterlist", transportlistroutes);
 app.use("/api/services", serviceroutes);
-app.use("/api", vendorRoutes); // Add this line
+app.use("/api", vendorRoutes);
 app.use("/api", driverRoutes);
-app.use("/api/locations", locationRoutes);
 app.use("/api", equipmentRoutes);
 app.use("/api", vehiicleRoutes);
 app.use("/api", asnRoutes);
+
+// Mount new OEM Pickup routes
+app.use("/api/companies", companyRoutes);
+app.use("/api/locations", locationRoutes);
+app.use("/api/transporters", transporterRoutes);
+app.use("/api/oem-pickups", oemPickupRoutes);
 
 // Add route not found handler
 app.use((req, res, next) => {
