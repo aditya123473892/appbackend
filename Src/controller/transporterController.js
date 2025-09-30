@@ -1,4 +1,4 @@
-const Transporter = require("../models/TransporterModel");
+const Transporter = require("../models/transporterModel");
 
 exports.getAllTransporters = async (req, res) => {
   try {
