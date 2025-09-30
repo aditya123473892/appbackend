@@ -31,16 +31,16 @@ connectDB();
 // Routes
 const authRoutes = require("./routes/authRoutes");
 const UserRoutes = require("./routes/UserRoutes");
-const transportRequestRoutes = require("./routes/transportRequestRoutes");
-const CustomerMasterRoutes = require("./routes/customermasterroutes");
-const transactionRoutes = require("./routes/transactionRoutes");
-const transportlistroutes = require("./routes/transporterlistroutes");
-const serviceroutes = require("./routes/serviceroutes");
-const vendorRoutes = require("./routes/vendorRoutes");
-const driverRoutes = require("./routes/driverRoutes");
-const equipmentRoutes = require("./routes/equipmentRoutes");
-const vehiicleRoutes = require("./routes/vehicleRoutes");
-const asnRoutes = require("./routes/asnRoutes");
+// const transportRequestRoutes = require("./routes/transportRequestRoutes");
+// const CustomerMasterRoutes = require("./routes/customermasterroutes");
+// const transactionRoutes = require("./routes/transactionRoutes");
+// const transportlistroutes = require("./routes/transporterlistroutes");
+// const serviceroutes = require("./routes/serviceroutes");
+// const vendorRoutes = require("./routes/vendorRoutes");
+// const driverRoutes = require("./routes/driverRoutes");
+// const equipmentRoutes = require("./routes/equipmentRoutes");
+// const vehiicleRoutes = require("./routes/vehicleRoutes");
+// const asnRoutes = require("./routes/asnRoutes");
 
 // New OEM Pickup Routes
 const companyRoutes = require("./routes/companyRoutes");
@@ -51,16 +51,16 @@ const oemPickupRoutes = require("./routes/oemPickupRoutes");
 // Mount routes
 app.use("/api/auth", authRoutes);
 app.use("/api/users", UserRoutes);
-app.use("/api/transport-requests", transportRequestRoutes);
-app.use("/api/customers", CustomerMasterRoutes);
-app.use("/api/transactions", transactionRoutes);
-app.use("/api/transporterlist", transportlistroutes);
-app.use("/api/services", serviceroutes);
-app.use("/api", vendorRoutes);
-app.use("/api", driverRoutes);
-app.use("/api", equipmentRoutes);
-app.use("/api", vehiicleRoutes);
-app.use("/api", asnRoutes);
+// app.use("/api/transport-requests", transportRequestRoutes);
+// app.use("/api/customers", CustomerMasterRoutes);
+// app.use("/api/transactions", transactionRoutes);
+// app.use("/api/transporterlist", transportlistroutes);
+// app.use("/api/services", serviceroutes);
+// app.use("/api", vendorRoutes);
+// app.use("/api", driverRoutes);
+// app.use("/api", equipmentRoutes);
+// app.use("/api", vehicleRoutes);
+// app.use("/api", asnRoutes);
 
 // Mount new OEM Pickup routes
 app.use("/api/companies", companyRoutes);
